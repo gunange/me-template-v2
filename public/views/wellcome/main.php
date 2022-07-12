@@ -9,7 +9,7 @@
 	<!-- <link rel="shortcut icon" href="" sizes="96x96"> -->
 
 	<link rel="stylesheet" href="<?= BaseAssets ?>font/font-local.css">
-	<link rel="stylesheet" href="<?= BaseAssets ?>css/bootstrap-costume.css">
+	<link rel="stylesheet" href="<?= BaseAssets ?>css/costume-bootstrap.css">
 	<link rel="stylesheet" href="<?= BaseAssets ?>css/costume-style.css">
 	<link rel="stylesheet" href="<?= BaseAssets ?>css/colors.css">
 	<link rel="stylesheet" href="<?= BaseAssets ?>css/animated.css">
@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="<?= BaseAssets ?>plugin/aos/aos.css">
 	<link rel="stylesheet" href="<?= BaseAssets ?>plugin/magnific/magnific-popup.css">
 	<link rel="stylesheet" href="<?= BaseAssets ?>css/wellcome.css">
-	<link rel="stylesheet" href="<?= BaseAssets ?>css/data-tables-costum.css">
+	<link rel="stylesheet" href="<?= BaseAssets ?>css/costume-data-tables.css">
 	<title>Document</title>
 </head>
 <body>
