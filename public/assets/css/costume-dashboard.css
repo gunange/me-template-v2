@@ -1,0 +1,51 @@
+
+/*-------------------------------*/
+/*dashboard-page*/
+
+.dash-sec-1 .card
+{
+	border-radius: 8px;
+}
+.dash-sec-1 .col-lg-3
+{
+	min-width: 269px !important;
+}
+.dash-sec-1 .item-1 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.dash-sec-1 .item-1 i
+{
+	font-size: 5rem;
+	margin-bottom: 0;
+
+}
+.dash-sec-1 .item-2 h1
+{
+	font-size: 4.5rem;
+	margin-bottom: 0;
+}
+.dash-sec-1 .item-2 p
+{
+	margin-top: -5px;
+}
+.dash-sec-1 .col-lg-3{
+	min-width: 250px !important;
+}
+.dash-sec-1.small .item-1 i
+{
+	font-size: 3rem;
+}
+.dash-sec-1.small .item-2 h1
+{
+	font-size: 2.5rem;
+}
+.dash-sec-1.small .item-2 p
+{
+	font-size:  .8rem;
+}
+.datepicker-dropdown {
+	z-index: 99999 !important;
+}

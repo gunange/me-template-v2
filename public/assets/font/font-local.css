@@ -1,0 +1,33 @@
+/* 
+font
+-------------------------------------
+*/
+
+
+@font-face 
+{
+	font-family: 'Poppins-300';
+	src:
+	url('http://localhost/web/SiGulali/public/assets/font/Poppins-ExtraBold.ttf');
+}
+
+@font-face 
+{
+	font-family: 'Poppins-200';
+	src:
+	url('http://localhost/web/SiGulali/public/assets/font/Poppins-Black.ttf');
+}
+
+@font-face 
+{
+	font-family: 'Poppins-100';
+	src:
+	url('http://localhost/web/SiGulali/public/assets/font/Poppins-ExtraLight.ttf');
+}
+
+@font-face 
+{
+	font-family: 'proxima';
+	src:
+	url('http://localhost/web/SiGulali/public/assets/font/Proxima-Nova-Font.otf');
+}

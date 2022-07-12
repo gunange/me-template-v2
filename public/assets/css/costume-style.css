@@ -1,0 +1,16 @@
+/*----------- breadcrumb ------------*/
+.breadcrumb
+{
+	background-color: transparent;
+	padding: 0rem 0.2rem;
+	margin-bottom: 0rem;
+	border-top : .5px solid #d9f4fb ;
+	border-radius: 0;
+	padding-top: 10px;
+}
+.img-upload{cursor: pointer !important;}
+.img-upload img{
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
