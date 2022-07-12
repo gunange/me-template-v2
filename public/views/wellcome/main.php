@@ -54,7 +54,7 @@
 						</li>
 					</ul>
 				</div>
-				<button class="btn btn-sm btn-green ms-3" type="button" onclick="openModalShow('#modal-center-lg', '<?= BASEURL ?>Wellcome/ModalTest')">Pesan</button>
+				<button class="btn btn-sm btn-green ms-3" type="button" onclick="openModalShow('#modal-center-lg', '<?= BASEURL ?>Wellcome/ModalTest')">Modal</button>
 				
 			</div>
 		</div>

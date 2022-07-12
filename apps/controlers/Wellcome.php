@@ -23,5 +23,9 @@ class Wellcome extends Controler{
 		endif;
 		$this->model->ResponseApi();
 	}
+	public function ModalTest()
+	{
+		$this->view('wellcome/modal-test');
+	}
 
 }

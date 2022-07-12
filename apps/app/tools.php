@@ -91,7 +91,7 @@ class tools
 	}
 	public static function rupiah($angka){
 	
-		return "Rp " . number_format($angka,0);
+		return number_format($angka,0);
 	}
 
 	public static function set_cookie_per_tahun($set=[])

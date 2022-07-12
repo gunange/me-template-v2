@@ -11,8 +11,8 @@ class database {
 	private static
 	$host="localhost", 
 	$user="root", 
-	$pass="nani", 
-	$db="ta_deviyanti" ;
+	$pass="dot", 
+	$db="me_db_template" ;
 
 	private static function con()
 	{
