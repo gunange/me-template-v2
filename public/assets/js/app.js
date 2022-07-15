@@ -135,3 +135,44 @@ function enablePassword(e, id) {
         pswd.disabled = true
     }
 }
+
+
+function exportCsv(target, fileName = "sample") {
+    $(target).tableHTMLExport({
+        type: 'csv',
+        filename: fileName + '.csv',
+        separator: ',',
+        newline: '\r\n',
+        trimContent: true,
+        quoteFields: true,
+        ignoreColumns: '',
+        ignoreRows: '',
+        htmlContent: false,
+        consoleLog: false,
+    });
+}
+
+function exportExcel(target="#example", fileName="sample", exclude=".noExl"){
+    $(target).table2excel({
+      exclude: exclude,
+      name: "Data",
+      filename: fileName + ".xls",
+      fileext: ".xls",
+      preserveColors: true
+  }); 
+}
+
+function exportPdf(target="#example", fileName="sample"){
+    html2canvas($(target)[0], {
+        onrendered: function (canvas) {
+            var data = canvas.toDataURL();
+            var docDefinition = {
+                content: [{
+                    image: data,
+                    width: 500
+                }]
+            };
+            pdfMake.createPdf(docDefinition).download(fileName + ".pdf");
+        }
+    });
+}

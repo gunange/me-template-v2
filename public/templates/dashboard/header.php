@@ -41,6 +41,12 @@
 	<!-- jsPDF -->
 	<script type="text/javascript" src="<?= BaseAssets ?>plugin/jsPDF/jspdf.min.js"></script>
 
+	
+	<!-- export-xcel-pdf-csv -->
+	<script type="text/javascript" src="<?= BaseAssets ?>plugin/export-csv-excel-pdf/export-csv.js"></script>
+	<script type="text/javascript" src="<?= BaseAssets ?>plugin/export-csv-excel-pdf/export-excel.js"></script>
+	<script type="text/javascript" src="<?= BaseAssets ?>plugin/export-csv-excel-pdf/export-pdf.js"></script>
+	<script type="text/javascript" src="<?= BaseAssets ?>plugin/export-csv-excel-pdf/html2canvas.min.js"></script>
 
 	<script type="text/javascript" src="<?= BaseAssets ?>js/app.js"></script>
 	<div class="wrapper" id="wrapper">
