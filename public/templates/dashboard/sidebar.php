@@ -4,7 +4,7 @@
 		<div class="sidebar-body">
 			<div class="sidebar-header">
 				<div class="d-flex align-items-center">
-					<i class="bi bi-geo-fill fs-2 text-white"></i>
+					<i class="bi bi-app-indicator fs-2 text-white"></i>
 					<h5 class="fs-5 ms-3 text-white">Dashboard</h5>
 				</div>
 				<button class="btn text-white" data-bs-toggle="tooltip" onclick="toogleSidebar()" data-bs-placement="right" title="Close Sidebar">
