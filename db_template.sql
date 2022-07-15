@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jul 15, 2022 at 04:55 AM
+-- Generation Time: Jul 15, 2022 at 06:11 AM
 -- Server version: 5.7.34
 -- PHP Version: 8.1.0
 
@@ -90,6 +90,7 @@ INSERT INTO `tbl_login` (`id`, `id_level`, `username`, `password`, `token`) VALU
 CREATE TABLE `tbl_user` (
   `id` int(11) NOT NULL,
   `id_login` int(11) NOT NULL,
+  `id_jenis_kelamin` int(11) NOT NULL,
   `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -97,8 +98,8 @@ CREATE TABLE `tbl_user` (
 -- Dumping data for table `tbl_user`
 --
 
-INSERT INTO `tbl_user` (`id`, `id_login`, `nama`) VALUES
-(1, 1, 'Administrator');
+INSERT INTO `tbl_user` (`id`, `id_login`, `id_jenis_kelamin`, `nama`) VALUES
+(1, 1, 1, 'Administrator');
 
 --
 -- Indexes for dumped tables
@@ -129,7 +130,8 @@ ALTER TABLE `tbl_login`
 --
 ALTER TABLE `tbl_user`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `User Login` (`id_login`);
+  ADD KEY `User Login` (`id_login`),
+  ADD KEY `User Jenis Kelamin` (`id_jenis_kelamin`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -173,6 +175,7 @@ ALTER TABLE `tbl_login`
 -- Constraints for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
+  ADD CONSTRAINT `User Jenis Kelamin` FOREIGN KEY (`id_jenis_kelamin`) REFERENCES `tbl_jenis_kelamin` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `User Login` FOREIGN KEY (`id_login`) REFERENCES `tbl_login` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
