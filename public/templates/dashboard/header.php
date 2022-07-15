@@ -19,7 +19,7 @@
 
 	<!-- databales -->
 	<link rel="stylesheet" href="<?= BaseAssets ?>/plugin/dataTables/css/dataTables.bootstrap5.min.css">
-	<link rel="stylesheet" href="<?= BaseAssets ?>/css/costume-data-tables.css">
+
 	
 
 	<!-- data-select2 -->
