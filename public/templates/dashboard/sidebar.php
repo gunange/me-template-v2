@@ -12,7 +12,7 @@
 				</button>
 			</div>
 			<div class="bio mx-auto px-3 pt-4 pb-2 lh-1">
-				<p class="fs-6 text-yellow">SiGulali</p>
+				<p class="fs-6 text-yellow">Account Level</p>
 				<p class="text-yellow-200">Admin</p>
 			</div>
 
