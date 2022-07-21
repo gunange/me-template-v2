@@ -48,6 +48,9 @@
 	<script type="text/javascript" src="<?= BaseAssets ?>plugin/export-csv-excel-pdf/export-pdf.js"></script>
 	<script type="text/javascript" src="<?= BaseAssets ?>plugin/export-csv-excel-pdf/html2canvas.min.js"></script>
 
+	<!-- chart js -->
+	<script type="text/javascript" src="<?= BaseAssets ?>js/chart.min.js"></script>
+
 	<script type="text/javascript" src="<?= BaseAssets ?>js/app.js"></script>
 	<div class="wrapper" id="wrapper">
 		<!-- sidebar-wrapper -->
