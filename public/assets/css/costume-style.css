@@ -1,16 +1,25 @@
-/*----------- breadcrumb ------------*/
-.breadcrumb
-{
-	background-color: transparent;
-	padding: 0rem 0.2rem;
-	margin-bottom: 0rem;
-	border-top : .5px solid #d9f4fb ;
-	border-radius: 0;
-	padding-top: 10px;
-}
+
+/*----------- image upload ------------*/
 .img-upload{cursor: pointer !important;}
 .img-upload img{
 	width: 100%;
 	height: auto;
 	object-fit: cover;
+}
+
+
+/*----------- pop up alert ------------*/
+.swal-footer {
+  display: flex;
+  justify-content: space-around;
+}
+.swal-button {
+  background-color: #6f42c1;
+  color: #fff;
+  font-size: .8rem;
+  padding: 4px 26px;
+  transition: .3s;
+}
+.swal-button:not([disabled]):hover {
+  background-color: #a98eda;
 }
