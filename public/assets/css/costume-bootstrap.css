@@ -1,36 +1,23 @@
 /*----------- modal ------------*/
-.modal-content
-{
+.modal-content{
 	/*z-index: 9999 !important;*/
 	/*1040*/
 }
-.modal-backdrop
-{
+.modal-backdrop{
 	display: none;
 }
 
-.modal
-{
+.modal{
 	transition: opacity .15s linear;
 	background-color: rgba(0, 0, 26, .5);
 }
 
 /*----------- card ------------*/
-.card
-{
+.card{
 	border:  none;
 }
 
 /*----------- breadcrumb ------------*/
-.breadcrumb
-{
-	background-color: transparent;
-	padding: 0rem 0.2rem;
-	margin-bottom: 0rem;
-	border-top : .5px solid #d9f4fb ;
-	border-radius: 0;
-	padding-top: 10px;
-}
 
 .breadcrumb a {
 	color: #007bff;
@@ -61,8 +48,7 @@
 /*----------- image ------------*/
 img.img-obj-cover,
 a.img-obj-cover img,
-.img-obj-cover
-{
+.img-obj-cover{
 	object-fit: cover;
 }
 .cursor-pointer{cursor: pointer !important}
@@ -92,12 +78,10 @@ a.img-obj-cover img,
 }
 
 /*----------- box shadow ------------*/
-.bx-shadow
-{
+.bx-shadow{
     transition: .3s ;
 }
-.bx-shadow:hover
-{
+.bx-shadow:hover{
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
 }
 

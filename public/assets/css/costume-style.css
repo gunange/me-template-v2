@@ -1,4 +1,3 @@
-
 /*----------- image upload ------------*/
 .img-upload{cursor: pointer !important;}
 .img-upload img{
@@ -22,4 +21,9 @@
 }
 .swal-button:not([disabled]):hover {
   background-color: #a98eda;
+}
+.swal-text {
+  font-size: .8rem;
+  width: 80%;
+  text-align: center;
 }
