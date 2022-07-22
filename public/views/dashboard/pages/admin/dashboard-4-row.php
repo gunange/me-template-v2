@@ -11,7 +11,7 @@
 </div>
 </div><!-- row breadcumb -->
 
-<div class="row mt-3 dash-sec-1 small">
+<div class="row mt-3 dash-row small">
   <div class="col-lg-3 col-sm-6 mt-3">
     <div class="card card-small shadow-sm bx-shadow px-3 bg-blue-400 text-white">
       <div class="d-flex px-4">

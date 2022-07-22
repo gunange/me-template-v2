@@ -16,7 +16,7 @@
   $iconX = "<i class=\"bi bi-x-circle-fill text-white \"></i>";
  ?>
 
-<div class="row mt-3 dash-sec-1">
+<div class="row mt-3 dash-row">
   <div class="col-lg-6 col-sm-6 mt-3">
     <div class="card card-small shadow-sm bx-shadow px-3 bg-blue-400 text-white">
       <div class="d-flex px-4">
