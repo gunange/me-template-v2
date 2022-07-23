@@ -31,7 +31,8 @@
 	<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
 		<div class="container">
 			<a class="navbar-brand fw-bold img-obj-cover" href="#">
-				<img src="" alt="" width="100%" height="40" style="object-fit: contain;">
+				<!-- For logo -->
+				<!-- <img src="" alt="" width="100%" height="40" style="object-fit: contain;"> -->
 			</a>
 
 			<div class="d-flex justify-content-center align-items-center">

@@ -3,24 +3,30 @@
 		<span>Home</span>
 	</li>
 	<li>
-		<a href="#">
+		<a href="<?= $this->gLink ?>Main">
 			<i class="bi bi-grid"></i>
 			<span>Dashboard</span>
 		</a>
 	</li>
-	<li class="header-menu">
-		<span>Sistem</span>
-	</li>
 	<li>
-		<a href="<?= $this->gLink ?>ExamplePDF">
+		<a href="<?= $this->gLink ?>DashboardEmpatRow">
 			<i class="bi bi-grid"></i>
-			<span>Example PDF</span>
+			<span>Dashboard 4 Row</span>
 		</a>
 	</li>
 	<li>
-		<a href="<?= $this->gLink ?>ExampleView">
+		<a href="<?= $this->gLink ?>DashboardChart">
 			<i class="bi bi-grid"></i>
-			<span>Example CRUD</span>
+			<span>Dashboard Chart</span>
+		</a>
+	</li>
+	<li class="header-menu">
+		<span>Example</span>
+	</li>
+	<li>
+		<a href="<?= $this->gLink ?>ExampleCrud">
+			<i class="bi bi-grid"></i>
+			<span>CRUD</span>
 		</a>
 	</li>
 	
@@ -28,18 +34,18 @@
 	<li>
 		<a href="#!" class="sidebar-link">
 			<i class="bi bi-grid"></i>
-			<span>Menu 3</span>
+			<span>Menu Subs</span>
 			<span class="badge badge-pill">100</span>
 		</a>
 		<div class="sidebar-submenu collapse">
 			<ul>
 				<li>
-					<a href="#">Submenu 1
+					<a href="<?= $this->gLink ?>Main">Submenu 1
 						<span class="badge badge-pill badge-dark">10</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">Submenu 2
+					<a href="<?= $this->gLink ?>Main">Submenu 2
 						<span class="badge badge-pill badge-dark">7</span>
 					</a>
 				</li>
@@ -50,18 +56,18 @@
 	<li>
 		<a href="#!" class="sidebar-link">
 			<i class="bi bi-grid"></i>
-			<span>Menu 3</span>
+			<span>Menu Subs</span>
 			<span class="badge badge-pill dark">0</span>
 		</a>
 		<div class="sidebar-submenu collapse">
 			<ul>
 				<li>
-					<a href="#">Submenu 1
+					<a href="<?= $this->gLink ?>Main">Submenu 1
 						<span class="badge badge-pill badge-dark">10</span>
 					</a>
 				</li>
 				<li>
-					<a href="#">Submenu 2
+					<a href="<?= $this->gLink ?>Main">Submenu 2
 						<span class="badge badge-pill badge-dark">7</span>
 					</a>
 				</li>

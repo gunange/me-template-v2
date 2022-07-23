@@ -26,13 +26,18 @@
 			<div class="card-header border-bottom bg-white">
 				<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center my-3">
 					<h6 class="m-0">
-						<i class="bi bi-box text-yellow-500 me-2"></i> Settings SPP
+						<i class="bi bi-box text-yellow-500 me-2"></i> Settings CRUD
 					</h6>
-					<div class="btn-toolbar mb-2 mb-md-0">
+					<div class="btn-toolbar mb-2 mb-md-0 btn-group">
+						<button class="btn btn-sm bg-purple text-white" 
+							title="Tambah data!" 
+							onclick="openModalShow('#modal', '<?= $this->gLink ?>SetCrud', ()=>{injectJsDashboardPrimary();} )">
+							<i class="bi bi-clipboard-plus"></i> Tambah
+						</button>
 						<button class="btn btn-sm bg-green text-white" 
 							title="Tambah data!" 
-							onclick="openModalShow('#modal', '<?= $this->gLink ?>SettingCrud', ()=>{injectJsDashboardPrimary();} )">
-							<i class="bi bi-clipboard-plus"></i> Tambah
+							onclick="openModalShow('#modal-center-xl', '<?= $this->gLink ?>SetCrud/Pdf', ()=>{injectJsDashboardPrimary();} )">
+							<i class="bi bi-printer-fill"></i> PDF to Print
 						</button>
 					</div>
 				</div>
@@ -46,8 +51,8 @@
 						<thead>
 							<tr>
 								<th width="50px">#</th>
-								<th>Bulan</th>
-								<th>Harga</th>
+								<th>Field Pertama</th>
+								<th>Field Kedua</th>
 								<th width="70px">Arsip</th>
 								<th class="text-center text-white"><i class="bi bi-gear-fill"></i></th>
 							</tr>
@@ -55,19 +60,19 @@
 						<tbody>
 							
 							<tr>
-								<td>Lorem, ipsum.</td>
+								<td>1</td>
 								<td>Lorem, ipsum.</td>
 								<td>Lorem, ipsum.</td>
 								<td>Lorem, ipsum.</td>
 								<td class="text-center" width="120px">
 									<div class="btn-group" role="group">
 										<button type="button" class="btn btn-sm bg-purple text-white" title="Update Data" 
-											onclick="openModalShow('#modal-center', '<?= $this->gLink ?>SettingCrud/up/1', 
+											onclick="openModalShow('#modal-center', '<?= $this->gLink ?>SetCrud/', 
 											()=>{injectJsDashboardPrimary();})">
 											<i class="bi bi-pencil-fill"></i>
 										</button>
 										<button type="button" class="btn btn-sm bg-red text-white" title="Hapus" 
-											onclick="openModalShow('#modal-center', '<?= $this->gLink ?>SettingCrud/del/1')">
+											onclick="openModalShow('#modal-center', '<?= $this->gLink ?>SetCrud/')">
 											<i class="bi bi-trash-fill"></i>
 										</button>
 									</div>

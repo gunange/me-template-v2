@@ -20,7 +20,7 @@
         </div>
         <div class="item-2 ps-3 py-4">
           <h1>0</h1>
-          <p class="">Event</p>
+          <p class="">Lorem.</p>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
         </div>
         <div class="item-2 ps-3 py-4">
           <h1>0</h1>
-          <p class="">Calon Member</p>
+          <p class="">Lorem.</p>
         </div>
       </div>
     </div>
@@ -46,7 +46,7 @@
         </div>
         <div class="item-2 ps-3 py-4">
           <h1>0</h1>
-          <p class="">Member Terdaftar</p>
+          <p class="">Lorem, ipsum.</p>
         </div>
       </div>
     </div>
@@ -58,8 +58,8 @@
           <i class="bi bi-file-earmark-text-fill"></i>
         </div>
         <div class="item-2 ps-3 py-4">
-          <h1></h1>
-          <p class="">Sertifikat</p>
+          <h1>0</h1>
+          <p class="">Lorem.</p>
         </div>
       </div>
     </div>

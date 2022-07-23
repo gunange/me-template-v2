@@ -25,9 +25,9 @@
         </div>
         <div class="item-2 ps-3 py-4">
           <h2>
-            0
+            <?= $iconV ?>
           </h2>
-          <p class="mt-2 fs-6">Seluruh Member yang tercatat</p>
+          <p class="mt-2 fs-6">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
       </div>
     </div>
@@ -40,9 +40,9 @@
         </div>
         <div class="item-2 ps-3 py-4">
           <h2>
-            0
+            <?= $iconX ?>
           </h2>
-          <p class="mt-2 fs-6">Kategori Devisi</p>
+          <p class="mt-2 fs-6">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
         </div>
       </div>
     </div>

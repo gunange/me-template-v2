@@ -15,6 +15,10 @@ class Wellcome extends Controler{
 		$this->view('wellcome/main');
 	}
 
+	public function FormLogin(){
+		$this->view('wellcome/login');
+	}
+
 	public function LogIn(){
 		if (tools::is_no_empty_post()):
 			$this->model->logIn();

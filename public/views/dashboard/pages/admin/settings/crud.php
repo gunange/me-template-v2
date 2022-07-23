@@ -48,6 +48,22 @@
 		</div>
 	</form>
 
+<?php elseif ($this->setPage == "Pdf"): ?>
+	<!-- PDF -->
+	<form class="modal-content" method="POST">
+		<div class="modal-header">
+			<pre class="modal-title fs-6 text-red"><i class="bi bi-trash-fill"></i> Delete</pre>
+		</div>
+		<div class="modal-body">
+			
+			<iframe  width="100%" height=500px" frameborder="0" src="<?= $this->gLink ?>PdfExample"></iframe>
+
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Tutup</button>
+		</div>
+	</form>
+
 <?php elseif ($this->setPage == "upAkun"): ?>
 	<!-- UPDATE AKUN -->
 	<form class="modal-content" method="POST">

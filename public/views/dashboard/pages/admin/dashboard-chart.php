@@ -27,7 +27,7 @@
 							<div class="item shadow-sm col-md-12 d-flex justify-content-center align-items-center flex-column">
 								<i class="bi bi-server text-idigo-300"></i>
 								<h2>6</h2>
-								<h5>Kartu Keluarga Terdaftar</h5>
+								<h5>Lorem, ipsum, dolor.</h5>
 							</div>
 						</div>
 					</div>
@@ -53,7 +53,7 @@
 							<div class="item shadow-sm col-md-12 d-flex justify-content-center align-items-center flex-column">
 								<i class="bi bi-people-fill text-yellow-500"></i>
 								<h2>10</h2>
-								<h5>Penduduk Terdaftar</h5>
+								<h5>Lorem, ipsum.</h5>
 							</div>
 						</div>
 					</div>

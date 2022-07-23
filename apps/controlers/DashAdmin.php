@@ -24,10 +24,13 @@ class DashAdmin extends Controler {
 	public function Main(){
 		$this->viewDashboard ('dashboard');
 	}
-	public function ExamplePDF(){
-		$this->viewDashboard ('pdf');
+	public function DashboardEmpatRow(){
+		$this->viewDashboard ('dashboard-4-row');
 	}
-	public function ExampleView(){
+	public function DashboardChart(){
+		$this->viewDashboard ('dashboard-chart');
+	}
+	public function ExampleCrud(){
 		$this->viewDashboard ('crud');
 	}
 	
