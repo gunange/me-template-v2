@@ -34,10 +34,20 @@
 							onclick="openModalShow('#modal', '<?= $this->gLink ?>SetCrud', ()=>{injectJsDashboardPrimary();} )">
 							<i class="bi bi-clipboard-plus"></i> Tambah
 						</button>
-						<button class="btn btn-sm bg-green text-white" 
+						<button class="btn btn-sm bg-pink text-white" 
 							title="Tambah data!" 
 							onclick="openModalShow('#modal-center-xl', '<?= $this->gLink ?>SetCrud/Pdf', ()=>{injectJsDashboardPrimary();} )">
 							<i class="bi bi-printer-fill"></i> PDF to Print
+						</button>
+						<button class="btn btn-sm bg-green text-white" 
+							title="Tambah data!" 
+							onclick="exportExcel('#DataTable', 'Export Excel');">
+							<i class="bi bi-file-earmark-spreadsheet-fill"></i> Export Excel
+						</button>
+						<button class="btn btn-sm bg-teal text-white" 
+							title="Tambah data!" 
+							onclick="exportCsv('#DataTable', 'Export CSV');">
+							<i class="bi bi-file-earmark-spreadsheet-fill"></i> Export CSV
 						</button>
 					</div>
 				</div>

@@ -62,8 +62,8 @@
 
 		});
 		doc.setFontSize(10);
-		doc.text(280,150, "Ternate, <?= tools::indoTime(date('d-m-Y')) ?>", null, null, 'center');
-		doc.text(280,180, "Nama Penulis",  null, null, 'center');
+		doc.text(180,150, "Ternate, <?= tools::indoTime(date('d-m-Y')) ?>", null, null, 'center');
+		doc.text(180,180, "Nama Penulis",  null, null, 'center');
 
 		document.getElementById('output').src = doc.output('datauristring');
 	</script>
