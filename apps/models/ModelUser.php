@@ -1,7 +1,7 @@
 <?php
 
 class ModelUser{
-	private $tokenName = 'tokenRisky';
+	private $tokenName = 'tokenNameTemplate';
 	public $userAllow = [1,2,3];
 	public 
 		$token,
@@ -32,8 +32,8 @@ class ModelUser{
 			$this->response['msg'] = "Username atau password salah";
 		endif;
 	}
-	public function generateToken($data){
-		return password_hash($data, PASSWORD_DEFAULT)  ;
+	public function generateToken($uniqid=""){
+		return password_hash(uniqid($uniqid), PASSWORD_DEFAULT)  ;
 	}
 	public function isUser(){
 		if(isset($_SESSION[$this->tokenName])):

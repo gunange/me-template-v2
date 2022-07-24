@@ -10,6 +10,28 @@
 					<label class="form-label">Nama User</label>
 					<input class="form-control form-control-sm" type="text" placeholder="Nama Lengkap" name="nama" required autocomplete="off">
 				</div>
+				<div class="col-md-12 mb-3">
+					<label class="form-label">Jenis Kelamin</label>
+					<select class="form-select form-select-sm sel-all" name="id_jenis_kelamin">
+						<option value=""></option>
+						<?php foreach ($this->model->sGetJenisKelamin() as $opsi) : ?>
+							<option value="<?= $opsi['id'] ?>"><?= $opsi['jenis_kelamin'] ?></option>
+						<?php endforeach; ?>
+					</select>
+				</div>
+				<section class="py-3">
+					<div class="bg-purple text-white py-2 px-3">
+						<i>Account</i>
+					</div>
+				</section>
+				<div class="col-md-12 mb-3">
+					<label class="form-label">Username</label>
+					<input class="form-control form-control-sm" type="text" placeholder="Username" name="username" required autocomplete="off">
+				</div>
+				<div class="col-md-12 mb-3">
+					<label class="form-label">Password</label>
+					<input class="form-control form-control-sm" type="text" placeholder="Password" name="password" required autocomplete="off">
+				</div>
 			</div>
 		</div>
 		<div class="modal-footer">
