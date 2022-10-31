@@ -61,9 +61,7 @@ class ModelUser{
 	}
 	public function logOut()
 	{
-		$_SESSION = [];
-	    session_unset();
-	    session_destroy();
+		$_SESSION[$this->tokenName] = false;
 	    tools::redirect(BASEURL);
 	    exit();
 	}
