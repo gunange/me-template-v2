@@ -238,22 +238,33 @@ class database {
 			----------------------------------
 			$set['tbl']	= "nama_table" ;
 			$set['key']	= "id" ;
-			$set['val']	= $_POST['update'] ;
+			$set['val']	= $_POST['up'] ;
 			
 			$set['set'] = [
 				"name_post" 		=> $_POST['name_post'],
 			];
 			
 			database::update($set);
+
+			jika ingin menggunakan query
+			$set['query'] = "WHERE ";
 		*/
 
 	    $sqlArray	= self::sqlArray($set['set']);
 		$pdo 		= $sqlArray['pdo'];
 		$psd 		= $sqlArray['psd'];
 
+		
+
+		if (isset($set['query'])):
+			$query = $set['query'];
+		else:
+			$query = "WHERE {$set['key']} = {$set['val']}";
+		endif;
+
 		$msg = "";
 	    if ($action) :
-	        $sql = self::con()->prepare("UPDATE {$set['tbl']} SET {$pdo['set']} WHERE {$set['key']} = {$set['val']}");
+	        $sql = self::con()->prepare("UPDATE {$set['tbl']} SET {$pdo['set']} {$query} ");
 	        $sql->execute($pdo['exc']);
 	        $cekQuery = $sql->rowCount();
 
@@ -266,7 +277,7 @@ class database {
 	        endif;
 	    else :
 	        $msg = "";
-	        $msg .= "UPDATE {$set['tbl']} SET {$psd['set']} WHERE {$set['key']} = {$set['val']}";
+	        $msg .= "UPDATE {$set['tbl']} SET {$psd['set']} {$query}";
 	    endif;
 
 	    return $msg;
@@ -277,8 +288,8 @@ class database {
 			HOW TO USE
 			----------------------------------
 			$set['tbl']		= "nama_table";
-			$set['key']		= "id_table";
-			$set['val']		= $_POST['id'];
+			$set['key']		= "id";
+			$set['val']		= $_POST['del'];
 		
 			database::delete($set);
 
