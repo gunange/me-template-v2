@@ -1,5 +1,6 @@
 # web-template
 
-# config url
-- buka file pada -> apps/core/const.php
-- pada varible define nilai BASEURL ubah sesuai url tempat anda menyimpan project anda
+## config database
+- buka apps/app/databae.php
+- config susuai database local masing-masing, kemudian set code dibawah ini di terminal tempat repostory berada
+- ``git update-index --assume-unchanged apps/app/database.php``

@@ -1,4 +1,4 @@
-function setForm() {
+function setForm(targetModal = null) {
     let eFrom = document.querySelectorAll('.data-form');
     eFrom.forEach((e) => {
         e.addEventListener('submit', (event) => {
@@ -24,26 +24,47 @@ function setForm() {
             }).then((text) => {
                 try {
                     const obj = JSON.parse(text);
-                    if (obj.response == 'OK') {
-                        (obj.href) ?
-                        swal("Good job!", obj.msg, "success", {
-                            buttons: 'OK',
-                        }).then((isTrue) => {
-                            if (isTrue) {
-                                window.location.href = obj.href;
-                            }
-                        }): swal("Good job!", obj.msg, "success", {
-                            buttons: false,
-                        });
+                    if(obj.tutupModal && targetModal != null){
+                        targetModal.hide();
+                    }
+                    if(obj.response == "noSwall"){
+                        if (obj.function){
+                            obj.function.forEach((fun)=>{
+                                eval(fun)
+                            });
+                        }
+                    }
+                    else if (obj.response == 'OK') {
+
+                        if (obj.href){
+                            swal("Good job!", obj.msg, "success", {
+                                buttons: 'OK',
+                            }).then((isTrue) => {
+                                if (isTrue) {
+                                    window.location.href = obj.href;
+                                }
+                            });
+
+                        } else{
+                            swal("Good job!", obj.msg, "success", {
+                                buttons: false,
+                            });
+                        }
+
+                        if (obj.function){
+                            obj.function.forEach((fun)=>{
+                                eval(fun)
+                            });
+                        }
 
                     } else {
                         swal(
                             "Oppps!",
                             obj.msg,
                             "error", {
-                                buttons: 'OK, Saya mengerti',
-                                dangerMode: true,
-                            });
+                            buttons: 'OK, Saya mengerti',
+                            dangerMode: true,
+                        });
                     }
                     if (obj.debug) {
                         console.log(JSON.stringify(obj.debug));
@@ -62,17 +83,19 @@ function setForm() {
 }
 
 
-function openModalShow(target = "#modal-center-lg", model, components = () => {}) {
+function openModalShow(target = "#modal-center-lg", model, components = () => { }, isSetForm=true) {
     modal = new bootstrap.Modal(document.querySelector(target), {
         keyboard: false
     });
 
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.querySelector(target + " #modal-target-output").innerHTML = this.responseText;
             modal.show();
-            setForm();
+            if (isSetForm == true){
+                setForm(modal);
+            }
             components();
         }
     };
@@ -81,12 +104,15 @@ function openModalShow(target = "#modal-center-lg", model, components = () => {}
     xhttp.send();
 }
 
-function replaceModalShow(target = "#modal-center-lg", model, components = () => {}) {
+function replaceModalShow(target = "#modal-center-lg", model, components = () => { }, isSetForm=true) {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.querySelector(target + " #modal-target-output").innerHTML = this.responseText;
-            setForm();
+
+            if (isSetForm == true){
+                setForm();
+            }
             components();
         }
     };
@@ -95,9 +121,9 @@ function replaceModalShow(target = "#modal-center-lg", model, components = () =>
     xhttp.send();
 }
 
-function replaceHtml(target="", model, components = () => {}){
+function replaceHtml(target = "#modal-center-lg", model, components = () => { }) {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.querySelector(target).innerHTML = this.responseText;
             components();
@@ -152,17 +178,17 @@ function exportCsv(target, fileName = "sample") {
     });
 }
 
-function exportExcel(target="#example", fileName="sample", exclude=".noExl"){
+function exportExcel(target = "#example", fileName = "sample", exclude = ".noExl") {
     $(target).table2excel({
-      exclude: exclude,
-      name: "Data",
-      filename: fileName + ".xls",
-      fileext: ".xls",
-      preserveColors: true
-  }); 
+        exclude: exclude,
+        name: "Data",
+        filename: fileName + ".xls",
+        fileext: ".xls",
+        preserveColors: true
+    });
 }
 
-function exportPdf(target="#example", fileName="sample"){
+function exportPdf(target = "#example", fileName = "sample") {
     html2canvas($(target)[0], {
         onrendered: function (canvas) {
             var data = canvas.toDataURL();
@@ -175,4 +201,27 @@ function exportPdf(target="#example", fileName="sample"){
             pdfMake.createPdf(docDefinition).download(fileName + ".pdf");
         }
     });
+}
+
+class App {
+
+    bulan({count = 12} = {}){
+      var  bulan = [
+            "Januari",
+            "Februari",
+            "Maret",
+            "April",
+            "Mei",
+            "Juni",
+            "Juli",
+            "Agustus",
+            "September",
+            "Oktober",
+            "November",
+            "Desember",
+        ];
+
+        return bulan.slice(0, count);
+    }
+    
 }
