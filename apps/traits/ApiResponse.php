@@ -1,7 +1,7 @@
 <?php
 trait ApiResponse{
 	public 
-		$response = [
+		$api = [
 			"response" 	=> "ERR",
 			"msg" 		=> ""
 		];
@@ -13,8 +13,8 @@ trait ApiResponse{
 		header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
     	
     	if(isset($this->data)):
-    		$this->response['data'] = $this->data;
+    		$this->api['data'] = $this->data;
     	endif;
-		echo json_encode($this->response, JSON_NUMERIC_CHECK);
+		echo json_encode($this->api, JSON_NUMERIC_CHECK);
 	}
 }

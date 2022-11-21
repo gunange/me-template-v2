@@ -25,11 +25,11 @@ class ModelUser{
 		if (is_array($dataSQl) && password_verify($password, $dataSQl['password']) ):
 			
 			$_SESSION[$this->tokenName] = $dataSQl['token'] ;
-			$this->response['href'] 	= $this->setUserControler($dataSQl['id_level']); 
+			$this->api['href'] 	= $this->setUserControler($dataSQl['id_level']); 
 
-			$this->response['response'] = "OK";
+			$this->api['response'] = "OK";
 		else:
-			$this->response['msg'] = "Username atau password salah";
+			$this->api['msg'] = "Username atau password salah";
 		endif;
 	}
 	public function generateToken($uniqid=""){
@@ -96,12 +96,12 @@ class ModelUser{
 
 			database::update($set);
 
-			$this->response["response"] = "OK";
-			$this->response["msg"] = "Akun anda berhasil diperbahrui !";
+			$this->api["response"] = "OK";
+			$this->api["msg"] = "Akun anda berhasil diperbahrui !";
 
 		} catch(PDOException $e){
-			$this->response['debug'] = $e;
-			$this->response["msg"] = "Username yang anda gunakan sudah terdaftar, mohon gunankan username yang lain ";
+			$this->api['debug'] = $e;
+			$this->api["msg"] = "Username yang anda gunakan sudah terdaftar, mohon gunankan username yang lain ";
 		}
 	}
 }
