@@ -10,7 +10,6 @@ function setForm(targetModal = null) {
                 console.log("Atribut action tidak diset");
                 return;
             }
-
             const formData = new FormData(thisForm);
             fetch(action, {
                 method: 'POST',
