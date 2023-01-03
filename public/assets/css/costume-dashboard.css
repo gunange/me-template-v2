@@ -1,9 +1,30 @@
 
 /*-------------------------------*/
 /*dashboard-page*/
+.content .container-xxl{
+	padding-right: 40px !important;
+	padding-left: 40px !important;
+}
+
+.primary-collor{
+	color: var(--primary-collor) !important; 
+}
+.primary-bg{
+	background-color : var(--primary-collor) !important;
+}
+.second-collor{
+	color: var(--second-collor) !important; 
+}
+.second-bg{
+	background-color : var(--second-collor) !important;
+}
+/*-------------------------------*/
+/*dashboard-page*/
 
 .dash-row .card{
+	cursor: pointer;
 	border-radius: 8px;
+	transition:  .3s;
 }
 .dash-row .col-lg-3{
 	min-width: 269px !important;
@@ -17,6 +38,9 @@
 	font-size: 5rem;
 	margin-bottom: 0;
 
+}
+.dash-row .item-2{
+	width: 90%;
 }
 .dash-row .item-2 h1{
 	font-size: 4.5rem;
@@ -32,10 +56,37 @@
 	font-size: 3rem;
 }
 .dash-row.small .item-2 h1{
-	font-size: 2.5rem;
+	font-size: 1.8rem;
+	margin-bottom: 9px;
 }
 .dash-row.small .item-2 p{
 	font-size:  .8rem;
+	transition: .3s;
+}
+
+.text-hidden,
+.text-hidden h1,
+.text-hidden h2,
+.text-hidden h3,
+.text-hidden h4,
+.text-hidden h5,
+.text-hidden h6,
+.text-hidden p
+{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.hover:hover .text-hidden ,
+.hover:hover .text-hidden h1,
+.hover:hover .text-hidden h2,
+.hover:hover .text-hidden h3,
+.hover:hover .text-hidden h4,
+.hover:hover .text-hidden h5,
+.hover:hover .text-hidden h6,
+.hover:hover .text-hidden p
+{
+	white-space: normal;
 }
 /*-------------------------------------------------------------*/
 .datepicker-dropdown{
@@ -63,4 +114,12 @@
 .dash-chart .item i{
 
     font-size:  8rem ;
+}
+/*-------------------------------------------------------------*/
+.h1, h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.fs-5 {
+  font-size: 12px !important;
 }
