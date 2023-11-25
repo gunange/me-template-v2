@@ -63,14 +63,14 @@ class database {
 		return $data ;
 	}
 
-	private static function sqlArray($set)
+	private static function sqlArray($set, $filter= true)
 	{
 		$x = [];
 		$y = [];
 		$z = [];
 		$w = [];
 		foreach ($set as $k => $v) :
-			$x[] = self::filter_str($v);
+			$x[] = ($filter) ? self::filter_str($v) : $v;
 			$y[] = "?";
 		endforeach;
 		foreach ($set as $k => $v) :
@@ -163,10 +163,11 @@ class database {
 			$set['set'] = [
 				"key_tb_field" => $_POST['key_tb_field'],
 			];
-			$set['tbl'] 	= "tbl_database";
+			$set['tbl'] 		= "tbl_database";
+			$set['filter_data']	= true ;
 			database::insert($set);
 		*/
-		$data = self::sqlArray($set['set']);
+		$data = self::sqlArray($set['set'], (isset($set['filter_data']) && !$set['filter_data'] ) ? false : true);
 		$pdo = $data['pdo'];
 		$psd = $data['psd'];
 
@@ -236,9 +237,10 @@ class database {
 		/*
 			HOW TO USE
 			----------------------------------
-			$set['tbl']	= "nama_table" ;
-			$set['key']	= "id" ;
-			$set['val']	= $_POST['up'] ;
+			$set['tbl']			= "nama_table" ;
+			$set['key']			= "id" ;
+			$set['val']			= $_POST['up'] ;
+			$set['filter_data']	= true ;
 			
 			$set['set'] = [
 				"name_post" 		=> $_POST['name_post'],
@@ -250,7 +252,7 @@ class database {
 			$set['query'] = "WHERE ";
 		*/
 
-	    $sqlArray	= self::sqlArray($set['set']);
+	    $sqlArray = self::sqlArray($set['set'], (isset($set['filter_data']) && !$set['filter_data'] ) ? false : true);
 		$pdo 		= $sqlArray['pdo'];
 		$psd 		= $sqlArray['psd'];
 
